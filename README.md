@@ -63,3 +63,11 @@ Compare the performance of two or more classifiers to determine the best model p
 * Include a README.md file that summarizes your assumptions and findings.
 
 * Submit the link to your GitHub project to Bootcamp Spot.
+
+## Conclusions
+
+The KNeighbors classifier performed reasonably well, achieving a test score or accuracy of 0.817. For the n-neighbors hyperparameter, I found that k=5 served best. This was chosen since this was the lowest value where the test accuracy begins to stabilize, so we maintain a high training accuracy which keeps the model as generalizable as possible.
+
+The Support Vector Machine Classifier (using the Linear kernel) achieved a higher test score or accuracy of 0.849 even before tuning its hyperparameters.
+
+I used GridSearchCV to tune the C and gamma hyperparameters with a 4x4 parameter grid {'C': [1, 5, 10, 50], 'gamma': [0.0001, 0.0005, 0.001, 0.005]}. Out of all combinations, I found that C = 50 and gamma = 0.0001 worked best. This resulted in a final accuracy of 0.881.
